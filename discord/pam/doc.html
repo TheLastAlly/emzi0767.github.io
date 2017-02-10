@@ -167,7 +167,29 @@
 						<p class="justify">
 							<span class="mono">/rss add &lt;channel&gt; &lt;url&gt; [tag]</span> Configures an RSS feed in specified channel. If <span class="mono">tag</span> is specified, it will be appended to posts' titles as <span class="mono">[tag]</span>. This command requires manage server permission.<br>
 							<span class="mono">/rss remove &lt;channel&gt; &lt;url&gt; [tag]</span> Removes an RSS feed from specified channel. This command requires all arguments to match those used to create the feed. This command requires manage server permission.<br>
-							<span class="mono">/rss list</span> Lists all feeds configured in current server. This command requires manage server permission.<br>
+							<span class="mono">/rss list</span> Lists all feeds configured in current server. This command requires manage server permission.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m12 tt">
+						<h6 class="center">Tag management</h6>
+						
+						<p class="justify">
+							<span class="mono">/tag &lt;name...&gt;</span> Displays a tag. This command is type-agnostic, meaning it will work with channel-specific, server-specific, and global tags. It will pick a best match (i.e. channel tag if one exists, falls back to server-wide, then to global). This command can be used by anyone.<br>
+							<span class="mono">/tag create &lt;name&gt; &lt;contents...&gt;</span> Creates a new tag with specified name and contents. The created tag will only be accessible in the channel it was created in. This command requires manage messages permission.<br>
+							<span class="mono">/tag create guild &lt;name&gt; &lt;contents...&gt;</span> Creates a new tag with specified name and contents. The created tag will be accessible from each channel of the server it was created in. This command requires manage server permission.<br>
+							<span class="mono">/tag edit &lt;name&gt; &lt;new contents...&gt;</span> Edits a tag with specified name, and replaces its contents. This command can only be used to edit tags created in the channel it is being invoked in. This command requires manage messages permission.<br>
+							<span class="mono">/tag edit guild &lt;name&gt; &lt;new contents...&gt;</span> Edits a tag with specified name, and replaces its contents. This command can only be used to edit server-wide tags. This command requires manage server permission.<br>
+							<span class="mono">/tag delete &lt;name&gt;</span> Deletes a tag with specified name. This command can only be used to delete tags created in the channel it is being invoked in. This command requires manage messages permission.<br>
+							<span class="mono">/tag delete guild &lt;name&gt;</span> Deletes a tag with specified name. This command can only be used to delete server-wide tags. This command requires manage server permission.<br>
+							<span class="mono">/tag info &lt;name&gt;</span> Displays information of a tag with specified name. This command is type-agnostic, meaning it will work with channel-specific, server-specific, and global tags. This command can be used by anyone.<br>
+							<span class="mono">/tag info guild &lt;name&gt;</span> Displays information of a tag with specified name. This command can only be used to display information of server-wide tags. This command can be used by anyone.<br>
+							<span class="mono">/tag info global &lt;name&gt;</span> Displays information of a tag with specified name. This command can only be used to display information of global tags. This command can be used by anyone.<br>
+							<span class="mono">/tag dump &lt;name&gt;</span> Dumps the contents of a tag with specified name. This command can only be used to dump tags created in the channel it is being invoked in. This command requires manage messages permission.<br>
+							<span class="mono">/tag dump guild &lt;name&gt;</span> Dumps the contents of a tag with specified name. This command can only be used to dump server-wide tags. This command requires manage server permission.<br>
+							<span class="mono">/tag list</span> Lists tags available from the channel the command was invoked in. This command can be used by anyone.
 						</p>
 					</div>
 				</div>
