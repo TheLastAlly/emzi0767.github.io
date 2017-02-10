@@ -24,6 +24,9 @@
 				span.mono
 				{
 					font-family: 'Source Code Pro','Consolas','Courier New',monospace;
+					background: #2D2D2D;
+					border: 1px solid #2B2B2B;
+					border-radius: 3px;
 				}
 			-->
 		</style>
@@ -46,26 +49,65 @@
 		
 		<div class="section no-pad-bot" id="index-banner">
 			<div class="container">
-				<h4 class="center white-text"><img src="/discord/pambot.png" alt="PAM"></h2>
-				<h4 class="header center white-text">PAM</h1>
+				<h3 class="center white-text"><img src="/discord/pambot.png" alt="PAM"></h2>
+				<h3 class="header center white-text">PAM</h1>
 				<div class="row center">
-					<h6 class="header col s12 light white-text">Python Administrative Module</h5>
+					<h5 class="header col s12 light white-text">Python Administrative Module</h5>
 				</div>
 			</div>
 			
 			<div class="container">
 				<div class="row center white-text">
-					<h6 class="center">Command documentation</h4>
-					
-					<div class="col s12 m4">
+					<h5 class="center">Command documentation</h4>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m12">
+						<h6 class="center">Help and introduction</h6>
+						
 						<p class="justify">
-							
+							By default, the bot uses <span class="mono">/</span> as command prefix. This means that commands are invoked like so: <span class="mono">/command arguments...</span>.
+						</p>
+						
+						<p class="justify">
+							In below documentation, all commands will be listed with default command prefix. Arguments will be listed as <span class="mono">&lt;argument&gt;</span>, denoting required argument; <span class="mono">&lt;argument...&gt;</span> denoting required catch-all argument (i.e. one that can take more than one value). Optional arguments will be denoted using <span class="mono">[argument]</span> and <span class="mono">[argument...]</span> for single and catch-all optional arguments. When typing commands, you must omit the <span class="mono">&lt;&gt;</span> and <span class="mono">[]</span> parts, meaning that if a command is denoted as <span class="mono">/command &lt;argument 1&gt; [argument 2]</span>, you use it as <span class="mono">/command value1 value2</span> or <span class="mono">/command value1</span>. If you want to pass an argument that contains spaces, wrap it in <span class="mono">""</span>, for instance: <span class="mono">/command "value for argument 1"</span> will invoke <span class="mono">/command</span> with a single argument, <span class="mono">value for argument 1</span>. This is not required for catch-all arguments. For instance, if a command is declared as <span class="mono">/echo &lt;message...&gt;</span>, you can invoke it as <span class="mono">/echo Hello, this is a message with spaces!</span>.
+						</p>
+						
+						<p class="justify">
+							<span class="mono">/help [module]</span> Displays help. Invoking this command without any arguments will list available modules. Specifying a module will show all commands declared in specified module, that the invoker can use.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m4">
+						<h6 class="center">Member management</h6>
+						
+						<p class="justify">
+							<span class="mono">/members report &lt;member&gt; &lt;reason...&gt;</span> Reports a member to moderators. This command requires moderation log to be configured on the server (see <span class="mono">/guild config modlog</span>), and can be used by anyone.<br>
+							<span class="mono">/members mute &lt;member&gt; [duration]</span> Mutes a member for a specified time. If <span class="mono">duration</span> is not specified, mute is permanent, and can only be lifted manually. This command requires configured mute role (see <span class="mono">/guild config muterole</span>), as well as moderation log (see <span class="mono">/guild configure modlog</span>), as well as kick members permission.<br>
+							<span class="mono">/members unmute &lt;member&gt;</span> Unmutes a member. This command requires configured mute role (see <span class="mono">/guild config muterole</span>), as well as moderation log (see <span class="mono">/guild configure modlog</span>), as well as kick members permission.<br>
+							<span class="mono">/members kick &lt;member&gt;</span> Kicks a member. This command requires moderation log to be configured on the server (see <span class="mono">/guild config modlog</span>), as well as kick members permission.<br>
+							<span class="mono">/members softban &lt;member&gt;</span> Softbans a member. Softban is a ban and instant unban. Functionally, it works like kicking, except, since a ban occurs, it also removes messages of the kicked member. The member is free to rejoin once softbanned. This command requires moderation log to be configured on the server (see <span class="mono">/guild config modlog</span>), as well as kick members permission.<br>
+							<span class="mono">/members ban &lt;member&gt; [duration]</span> Bans a member for a specified time. If <span class="mono">duration</span> is not specified, ban is permanent, and can only be lifted manually. This command requires moderation log to be configured on the server (see <span class="mono">/guild config modlog</span>), as well as ban members permission.<br>
+							<span class="mono">/members unban &lt;member id&gt;</span> Unbans a member by his user ID. This command requires moderation log to be configured on the server (see <span class="mono">/guild config modlog</span>), as well as ban members permission.<br>
+							<span class="mono">/members prune</span> Prunes inactive members. Inactive members are ones that have not logged in within 7 days, and were not assigned a role. This command requires kick members permission.<br>
+							<span class="mono">/members information</span> Displays information about a member. This command can be used by anyone.<br>
+							<span class="mono">/members reason &lt;case id&gt; &lt;reason...&gt;</span> Sets a moderator action's reason, as well as responsible moderator. This command requires configured mute role (see <span class="mono">/guild config muterole</span>), as well as moderation log (see <span class="mono">/guild configure modlog</span>), as well as kick members and ban members permissions.
 						</p>
 					</div>
 					
 					<div class="col s12 m4">
+						<h6 class="center">Role management</h6>
+						
 						<p class="justify">
-							
+							<span class="mono">/roles create &lt;name...&gt;</span> Creates a new role with specified name. This command requires manage roles permission.<br>
+							<span class="mono">/roles delete &lt;role&gt;</span> Deletes specified role. This command requires manage roles permission.<br>
+							<span class="mono">/roles edit &lt;role&gt; &lt;parameters...&gt;</span> Edits specified role. Arguments are passed as <span class="mono">argument1=value1 argument2=value2</span>. Possible arguments are <span class="mono">name permissions colour hoist mentionable</span>. This command requires manage roles permission.<br>
+							<span class="mono">/roles information &lt;role&gt;</span> Displays information about specified role. This command requires manage roles permission.<br>
+							<span class="mono">/roles list</span> Lists roles defined in specified server. This command requires manage roles permission.<br>
+							<span class="mono">/roles adduser &lt;member&gt; &lt;roles...&gt;</span> Adds specified member to specified roles. This command requires manage roles permission.<br>
+							<span class="mono">/roles removeuser &lt;member&gt; &lt;roles...&gt;</span> Removes specified member from specified roles. This command requires manage roles permission.
 						</p>
 					</div>
 					
