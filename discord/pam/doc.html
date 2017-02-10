@@ -96,6 +96,9 @@
 						<p class="justify">
 							<span class="mono">/guild rename &lt;name...&gt;</span> Renames current server. This command requires manage server permission.<br>
 							<span class="mono">/guild info</span> Displays information about current server. This command can be used by anyone.<br>
+							<span class="mono">/guild config prefix &lt;prefix&gt;</span> Changes command prefix for current server. Setting it to <span class="mono">""</span> will reset it to default. This command requires manage server permission.<br>
+							<span class="mono">/guild config modlog &lt;channel&gt;</span> Configures moderation log for current server. This command requires manage server permission.<br>
+							<span class="mono">/guild config muterole &lt;role&gt;</span> Configures mute role for current server. This command requires manage server permission.
 						</p>
 					</div>
 				</div>
@@ -131,6 +134,40 @@
 							<span class="mono">/roles list</span> Lists roles defined in specified server. This command requires manage roles permission.<br>
 							<span class="mono">/roles adduser &lt;member&gt; &lt;roles...&gt;</span> Adds specified member to specified roles. This command requires manage roles permission.<br>
 							<span class="mono">/roles removeuser &lt;member&gt; &lt;roles...&gt;</span> Removes specified member from specified roles. This command requires manage roles permission.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m12 tt">
+						<h6 class="center">Channel management</h6>
+						
+						<p class="justify">
+							<span class="mono">/channels purge &lt;channel&gt; [count]</span> Purges specified channel. If <span class="mono">count</span> is not specified, it defaults to 100. This command requires manage channels permission.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m12 tt">
+						<h6 class="center">Bot control</h6>
+						
+						<p class="justify">
+							<span class="mono">/bot nickname &lt;nickname...&gt;</span> Changes bot's nickname. This will make the bot nickname itself <span class="mono">PAM Bot (specified nick)</span>. If <span class="mono">nickname</span> is set to "", it will reset the nickname. This command requires manage nicknames permission.<br>
+							<span class="mono">/bot about</span> Displays information about the bot. This command can be used by anyone.<br>
+							<span class="mono">/bot invitelink</span> Displays the link to invite this bot to your own server. This command can be used by anyone.
+						</p>
+					</div>
+				</div>
+				
+				<div class="row white-text">
+					<div class="col s12 m12 tt">
+						<h6 class="center">RSS management</h6>
+						
+						<p class="justify">
+							<span class="mono">/rss add &lt;channel&gt; &lt;url&gt; [tag]</span> Configures an RSS feed in specified channel. If <span class="mono">tag</span> is specified, it will be appended to posts' titles as <span class="mono">[tag]</span>. This command requires manage server permission.<br>
+							<span class="mono">/rss remove &lt;channel&gt; &lt;url&gt; [tag]</span> Removes an RSS feed from specified channel. This command requires all arguments to match those used to create the feed. This command requires manage server permission.<br>
+							<span class="mono">/rss list</span> Lists all feeds configured in current server. This command requires manage server permission.<br>
 						</p>
 					</div>
 				</div>
