@@ -11,3 +11,8 @@ img.emzi-avatar
 	vertical-align: middle;
 	margin-top: -6px;
 }
+
+.container > p.justify
+{
+	text-align: justify;
+}
