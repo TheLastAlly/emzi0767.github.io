@@ -1,77 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html class="dark smalllogo">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<title>Emzi0767: PAM Bot</title>
-		
-		<style type="text/css">
-			<!--
-				html
-				{
-					background: #333;
-					color: #FFF;
-				}
-				
-				img[alt='PAM']
-				{
-					width: 64px;
-					height: 64px;
-				}
-				
-				span.mono
-				{
-					font-family: 'Source Code Pro','Consolas','Courier New',monospace;
-					background: #2D2D2D;
-					border: 1px solid #2B2B2B;
-					border-radius: 3px;
-				}
-				
-				.tt
-				{
-					font-size: 9.5pt;
-				}
-				
-				.tt span.mono
-				{
-					font-size: 8.5pt;
-				}
-			-->
-		</style>
+		<title>Emzi0767: PAM Bot - Documentation</title>
 	</head>
+	
 	<body>
-		<nav class="light-blue darken-4" role="navigation">
-			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Emzi0767</a>
+		<nav class="blue darken-2" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="/" class="brand-logo"><img src="/content/palpatrim.jpg" class="emzi-avatar" alt="Emzi0767"> Emzi0767</a>
+				
 				<ul class="right hide-on-med-and-down">
 					<li><a href="/projects">Projects</a></li>
-					<li><a href="/discord">Discord Bots</a></li>
+					<li class="active"><a href="/discord">Discord Bots</a></li>
 				</ul>
 
 				<ul id="nav-mobile" class="side-nav">
 					<li><a href="/projects">Projects</a></li>
-					<li><a href="/discord">Discord Bots</a></li>
+					<li class="active"><a href="/discord">Discord Bots</a></li>
 				</ul>
-				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">Menu</i></a>
 			</div>
 		</nav>
 		
-		<div class="section no-pad-bot" id="index-banner">
+		<div class="section no-pad-bot white-text" id="index-banner">
 			<div class="container">
-				<h3 class="center white-text"><img src="/discord/pambot.png" alt="PAM"></h2>
-				<h3 class="header center white-text">PAM</h1>
+				<h2 class="header center"><img src="/discord/pambot.png" alt="PAM"></h2>
+				<h2 class="header center">PAM</h1>
+				<h5 class="header center">Python Administrative Module</h5>
+				
 				<div class="row center">
-					<h5 class="header col s12 light white-text">Python Administrative Module</h5>
-				</div>
-			</div>
-			
-			<div class="container">
-				<div class="row center white-text">
 					<h5 class="center">Command documentation</h4>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Help and introduction</h6>
 						
@@ -89,7 +52,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Server management</h6>
 						
@@ -103,7 +66,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Member management</h6>
 						
@@ -122,7 +85,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Role management</h6>
 						
@@ -138,7 +101,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Channel management</h6>
 						
@@ -148,7 +111,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Bot control</h6>
 						
@@ -160,7 +123,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">RSS management</h6>
 						
@@ -172,7 +135,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Tag management</h6>
 						
@@ -194,7 +157,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">GNU/Stallman module management</h6>
 						
@@ -209,7 +172,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Fun commands</h6>
 						
@@ -229,7 +192,7 @@
 					</div>
 				</div>
 				
-				<div class="row white-text">
+				<div class="row">
 					<div class="col s12 m12 tt">
 						<h6 class="center">Aliases</h6>
 						
@@ -255,6 +218,7 @@
 
 		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" type="text/css">
+		<link rel="stylesheet" href="/content/mtz-tw.css" type="text/css">
 		
 		<!-- Materialize JS -->
 		<script type="text/javascript" src="//code.jquery.com/jquery-3.1.1.min.js"></script>
