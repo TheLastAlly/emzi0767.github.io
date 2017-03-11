@@ -53,7 +53,9 @@
 						<h6 class="center">Bot control</h6>
 						
 						<p class="justify">
-							<span class="mono">devi:settings &ld;setting&gt; &lt;operation&gt; &lt;value&gt;</span> Controls selfbot's settings. Currently available setting is <span class="mono">prefix</span>, with available operations of <span class="mono">set</span> or <span class="mono">del</span>. The argument given changes the command prefix. For <span class="mono">del</span>, specify empty argument (<span class="mono">""</span>).
+							<span class="mono">devi:settings &ld;setting&gt; &lt;operation&gt; &lt;value&gt;</span> Controls selfbot's settings. Currently available setting is <span class="mono">prefix</span>, with available operations of <span class="mono">set</span> or <span class="mono">del</span>. The argument given changes the command prefix. For <span class="mono">del</span>, specify empty argument (<span class="mono">""</span>).<br>
+							<span class="mono">devi:save</span> Forces Devi to save current settings.<br>
+							<span class="mono">devi:ping</span> Measures the latency and response time of Discord API.
 						</p>
 					</div>
 				</div>
@@ -66,6 +68,19 @@
 							<span class="mono">devi:quote &lt;message id or user mention&gt; [message...]</span> Quotes a message and attaches it as an embed to your message. You can specify a message to quote, or users whose last message to quote. You can also specify what to say in your own message. Devi will only look in last 100 messages for the quoted message.<br>
 							<span class="mono">devi:eval &lt;code block...&gt;</span> Evaluates a snippet of C# code. The code needs to be formatted as:<br>
 							<span class="mono">```cs<br>code here<br>```</span>
+						</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12 m12 tt">
+						<h6 class="center">Emoji utilities</h6>
+						
+						<p class="justify">
+							<span class="mono">devi:emoji &lt;emoji or =name&gt;</span> Displays information about specified emoji. You can specify by emoji or name, but the latter needs to be prefixed with <span class="mono">=</span>.<br>
+							<span class="mono">devi:guildemoji &lt;name&gt;</span> Produces specified guild emoji.<br>
+							<span class="mono">devi:imply &lt;string...&gt;</span> Transforms the specified string into an implication using implying emoji and regional indicators.<br>
+							<span class="mono">devi:dong &lt;name&gt;</span> Produces specified donger.
 						</p>
 					</div>
 				</div>
