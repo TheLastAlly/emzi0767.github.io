@@ -79,11 +79,7 @@ span.mono
 
 .hypesquad-img
 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-height: 100%;
+	height: 64px;
 	display: block;
 	float: left;
 	margin: 0 6px 0 0;
@@ -92,9 +88,4 @@ span.mono
 .clear-both
 {
 	clear: both;
-}
-
-.relativity
-{
-	position: relative;
 }
