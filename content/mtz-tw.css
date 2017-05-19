@@ -76,3 +76,16 @@ span.mono
 {
 	font-size: 8.5pt;
 }
+
+.hypesquad-img
+{
+	height: 100%;
+	display: inline-block;
+	float: left;
+	margin: 0 6px 0 0;
+}
+
+.clear-both
+{
+	clear: both;
+}
